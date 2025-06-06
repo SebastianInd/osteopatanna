@@ -21,66 +21,117 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="manifest" href="assets/site.webmanifest">
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.style.display = lang === 'en' ? '' : 'none';
+            });
+            document.querySelectorAll('[data-sv]').forEach(el => {
+                el.style.display = lang === 'sv' ? '' : 'none';
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            switchLang('sv'); // Changed default to Swedish
+        });
+    </script>
 </head>
 
 <body>
     <div class="under-construction">
-        <strong>Note:</strong> This website is still under construction.
+        <strong data-en>Note:</strong><strong data-sv style="display:none">Obs!</strong>
+        <span data-en>This website is still under construction.</span>
+        <span data-sv style="display:none">Denna webbplats är under uppbyggnad.</span>
     </div>
-    <header>
+    <header style="position: relative;">
         <img src="assets/logo.png" alt="Osteopat Anna Logo" class="logo">
+        <div style="position: absolute; top: 0.5em; right: 0.5em;">
+            <button onclick="switchLang('sv')" style="background:none;border:none;cursor:pointer;">
+                <img src="assets/flag-se.png" alt="Svenska" title="Svenska" style="height:18px;width:27px;">
+            </button>
+            <button onclick="switchLang('en')" style="background:none;border:none;cursor:pointer;">
+                <img src="assets/flag-gb.png" alt="English" title="English" style="height:18px;width:27px;">
+            </button>
+        </div>
         <h1>Anna Caglio</h1>
-        <p class="subtitle">Osteopathy & Massage Treatments</p>
+        <p class="subtitle" data-en>Osteopathy & Massage Treatments</p>
+        <p class="subtitle" data-sv style="display:none">Osteopati & Massagebehandlingar</p>
     </header>
     <main>
         <section class="about">
-            <h2>About Anna</h2>
-            <p>
+            <h2 data-en>About Anna</h2>
+            <h2 data-sv style="display:none">Om Anna</h2>
+            <p data-en>
                 Hi, I'm Anna, a certified osteopath and massage therapist dedicated to helping you achieve better health
                 and well-being. With years of experience and a passion for holistic care, I tailor each treatment to
                 your individual needs.
             </p>
+            <p data-sv style="display:none">
+                Hej, jag heter Anna och är certifierad osteopat och massageterapeut. Jag brinner för att hjälpa dig till
+                bättre hälsa och välmående. Med många års erfarenhet och ett holistiskt synsätt anpassar jag varje
+                behandling efter dina behov.
+            </p>
         </section>
         <section class="services">
-            <h2>What I Offer</h2>
-            <ul>
+            <h2 data-en>What I Offer</h2>
+            <h2 data-sv style="display:none">Vad jag erbjuder</h2>
+            <ul data-en>
                 <li><strong>Osteopathic Treatments:</strong> Gentle, hands-on therapy to restore balance and relieve
                     pain.</li>
                 <li><strong>Massages:</strong> Relaxing and therapeutic massages to ease tension and promote relaxation.
                 </li>
             </ul>
+            <ul data-sv style="display:none">
+                <li><strong>Osteopatiska behandlingar:</strong> Mjuk, manuell terapi för att återställa balans och
+                    lindra smärta.</li>
+                <li><strong>Massage:</strong> Avslappnande och terapeutisk massage för att minska spänningar och främja
+                    välbefinnande.</li>
+            </ul>
         </section>
         <section class="osteopathy">
-            <h2>What is Osteopathy?</h2>
-            <p>
+            <h2 data-en>What is Osteopathy?</h2>
+            <h2 data-sv style="display:none">Vad är osteopati?</h2>
+            <p data-en>
                 Osteopathy is a holistic approach to healthcare that focuses on the musculoskeletal system. Through
                 manual techniques, it aims to improve mobility, relieve pain, and support the body's natural healing
                 processes.
             </p>
+            <p data-sv style="display:none">
+                Osteopati är en holistisk vårdform som fokuserar på kroppens muskler och leder. Genom manuella tekniker
+                förbättras rörlighet, smärta lindras och kroppens naturliga läkningsprocesser stöds.
+            </p>
         </section>
         <section class="locations">
-            <h2>Where to Find Me</h2>
+            <h2 data-en>Where to Find Me</h2>
+            <h2 data-sv style="display:none">Här hittar du mig</h2>
             <div class="location">
                 <h3>Idrottskadekliniken Sävedalen</h3>
                 <p>Göteborgsvägen 74, 433 63 Sävedalen</p>
                 <a href="https://www.bokadirekt.se/places/idrottsskadekliniken-i-savedalen-osteopat-anna-57332"
-                    class="booking-btn" target="_blank">Book in Sävedalen</a>
+                    class="booking-btn" target="_blank" data-en>Book in Sävedalen</a>
+                <a href="https://www.bokadirekt.se/places/idrottsskadekliniken-i-savedalen-osteopat-anna-57332"
+                    class="booking-btn" target="_blank" data-sv style="display:none">Boka i Sävedalen</a>
             </div>
             <div class="location">
                 <h3>Studio Kålltorp</h3>
                 <p>Kålltorpsgatan 8, 416 52 Göteborg</p>
                 <a href="https://www.bokadirekt.se/places/annas-osteopati-massage-kalltorp-59143" class="booking-btn"
-                    target="_blank">Book in Kålltorp</a>
+                    target="_blank" data-en>Book in Kålltorp</a>
+                <a href="https://www.bokadirekt.se/places/annas-osteopati-massage-kalltorp-59143" class="booking-btn"
+                    target="_blank" data-sv style="display:none">Boka i Kålltorp</a>
             </div>
         </section>
         <section class="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:caglio.an@gmail.com">caglio.an@gmail.com</a></p>
-            <p>Phone: <a href="tel:+46793549060">+46 793 54 90 60</a></p>
+            <h2 data-en>Contact</h2>
+            <h2 data-sv style="display:none">Kontakt</h2>
+            <p data-en>Email: <a href="mailto:caglio.an@gmail.com">caglio.an@gmail.com</a></p>
+            <p data-sv style="display:none">E-post: <a href="mailto:caglio.an@gmail.com">caglio.an@gmail.com</a></p>
+            <p data-en>Phone: <a href="tel:+46793549060">+46 793 54 90 60</a></p>
+            <p data-sv style="display:none">Telefon: <a href="tel:+46793549060">+46 793 54 90 60</a></p>
         </section>
     </main>
     <footer>
-        &copy; 2025 Osteopat Anna. All rights reserved.
+        <span data-en>&copy; 2025 Osteopat Anna. All rights reserved.</span>
+        <span data-sv style="display:none">&copy; 2025 Osteopat Anna. Alla rättigheter förbehållna.</span>
     </footer>
 </body>
 
