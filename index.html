@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Osteopat Anna</title>
     <meta name="description"
-        content="Anna Caglio - Osteopat i Göteborg. Osteopatiska behandlingar och massage i Sävedalen och Kålltorp. Boka tid för bättre hälsa och välmående.">
+        content="Anna Caglio - Osteopat i Göteborg. Osteopatiska behandlingar och massage i Kålltorp och Sävedalen. Boka tid för bättre hälsa och välmående.">
     <meta name="keywords"
         content="Osteopat, Anna Caglio, Göteborg, Sävedalen, Kålltorp, Massage, Osteopati, Behandling, Hälsa, Välmående, Bokadirekt">
     <meta name="author" content="Anna Caglio">
     <meta property="og:title" content="Osteopat Anna - Osteopati & Massage i Göteborg">
     <meta property="og:description"
-        content="Osteopat Anna erbjuder osteopatiska behandlingar och massage i Sävedalen och Kålltorp, Göteborg. Boka tid för personlig vård och bättre hälsa.">
+        content="Osteopat Anna erbjuder osteopatiska behandlingar och massage i Kålltorp och Sävedalen. Boka tid för personlig vård och bättre hälsa.">
     <meta property="og:image" content="https://osteopatanna.se/assets/logo.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://osteopatanna.se/">
@@ -31,7 +31,7 @@
             });
         }
         document.addEventListener('DOMContentLoaded', () => {
-            switchLang('sv'); // Changed default to Swedish
+            switchLang('sv');
         });
     </script>
 </head>
@@ -60,16 +60,21 @@
         <section class="about">
             <h2 data-en>About Anna</h2>
             <h2 data-sv style="display:none">Om Anna</h2>
-            <p data-en>
-                Hi, I'm Anna, a certified osteopath and massage therapist dedicated to helping you achieve better health
-                and well-being. With years of experience and a passion for holistic care, I tailor each treatment to
-                your individual needs.
-            </p>
-            <p data-sv style="display:none">
-                Hej, jag heter Anna och är certifierad osteopat och massageterapeut. Jag brinner för att hjälpa dig till
-                bättre hälsa och välmående. Med många års erfarenhet och ett holistiskt synsätt anpassar jag varje
-                behandling efter dina behov.
-            </p>
+            <div class="about-flex">
+                <div class="about-text">
+                    <p data-en>
+                        Hi, I'm Anna, a certified osteopath dedicated to helping you achieve better health and
+                        well-being. With years of experience and a passion for holistic care, I tailor each
+                        treatment to your individual needs.
+                    </p>
+                    <p data-sv style="display:none">
+                        Hej, jag heter Anna och är certifierad osteopat. Jag brinner för att hjälpa dig till bättre
+                        hälsa och välmående. Med många års erfarenhet och ett holistiskt synsätt anpassar jag varje
+                        behandling efter dina behov.
+                    </p>
+                </div>
+                <img src="assets/anna.jpeg" alt="Anna Caglio" class="about-img">
+            </div>
         </section>
         <section class="services">
             <h2 data-en>What I Offer</h2>
@@ -104,20 +109,20 @@
             <h2 data-en>Where to Find Me</h2>
             <h2 data-sv style="display:none">Här hittar du mig</h2>
             <div class="location">
-                <h3>Idrottskadekliniken Sävedalen</h3>
-                <p>Göteborgsvägen 74, 433 63 Sävedalen</p>
-                <a href="https://www.bokadirekt.se/places/idrottsskadekliniken-i-savedalen-osteopat-anna-57332"
-                    class="booking-btn" target="_blank" data-en>Book in Sävedalen</a>
-                <a href="https://www.bokadirekt.se/places/idrottsskadekliniken-i-savedalen-osteopat-anna-57332"
-                    class="booking-btn" target="_blank" data-sv style="display:none">Boka i Sävedalen</a>
-            </div>
-            <div class="location">
                 <h3>Studio Kålltorp</h3>
                 <p>Kålltorpsgatan 8, 416 52 Göteborg</p>
                 <a href="https://www.bokadirekt.se/places/annas-osteopati-massage-kalltorp-59143" class="booking-btn"
                     target="_blank" data-en>Book in Kålltorp</a>
                 <a href="https://www.bokadirekt.se/places/annas-osteopati-massage-kalltorp-59143" class="booking-btn"
                     target="_blank" data-sv style="display:none">Boka i Kålltorp</a>
+            </div>
+            <div class="location">
+                <h3>Idrottskadekliniken Sävedalen</h3>
+                <p>Göteborgsvägen 74, 433 63 Sävedalen</p>
+                <a href="https://www.bokadirekt.se/places/idrottsskadekliniken-i-savedalen-osteopat-anna-57332"
+                    class="booking-btn" target="_blank" data-en>Book in Sävedalen</a>
+                <a href="https://www.bokadirekt.se/places/idrottsskadekliniken-i-savedalen-osteopat-anna-57332"
+                    class="booking-btn" target="_blank" data-sv style="display:none">Boka i Sävedalen</a>
             </div>
         </section>
         <section class="contact">
