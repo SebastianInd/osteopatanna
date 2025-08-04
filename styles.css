@@ -124,15 +124,6 @@ footer {
     font-size: 0.95rem;
 }
 
-.under-construction {
-    background: #ffbea1;
-    color: #006063;
-    text-align: center;
-    padding: 0.7rem 1rem;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-}
-
 .about-flex {
     display: flex;
     align-items: flex-start;
