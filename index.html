@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
@@ -123,6 +123,12 @@
         const urlParams = new URLSearchParams(window.location.search);
         const want = urlParams.get("lang") === "en" ? "en" : "sv";
         switchLang(want);
+
+        // Update copyright year
+        const year = new Date().getFullYear();
+        document.querySelectorAll(".copyright-year").forEach((el) => {
+          el.textContent = year;
+        });
       });
     </script>
   </head>
@@ -164,32 +170,52 @@
         <div data-sv lang="sv" style="display: none">
           <h2 id="announcement-heading">🌸 MAMMALEDIGHET 🌸</h2>
           <p>
-            I maj går jag på mammaledighet – detta glädjer jag mig enormt till! 🥰<br />
-            Fram till dess jobbar jag på som vanligt i studion i Kålltorp och på Idrottskadekliniken i Sävedalen, men från april kör jag lite reducerade tider.<br />
-            Det börjar redan fyllas upp i kalendern, så boka gärna i god tid via Bokadirekt eller hör av dig via mail om du önskar komma in på behandling!
+            I maj går jag på mammaledighet – detta glädjer jag mig enormt till!
+            🥰<br />
+            Fram till dess jobbar jag på som vanligt i studion i Kålltorp och på
+            Idrottskadekliniken i Sävedalen, men från april kör jag lite
+            reducerade tider.<br />
+            Det börjar redan fyllas upp i kalendern, så boka gärna i god tid via
+            Bokadirekt eller hör av dig via mail om du önskar komma in på
+            behandling!
           </p>
           <p>
-            Gällande osteopati, kommer jag inte att ta emot några nybesök innan mammaledigheten, eftersom jag inte kan garantera kontinuerlig uppföljning under månaderna som följer. Fokus kommer att ligga på att ta hand om dig som redan har varit hos mig sedan tidigare.
+            Gällande osteopati, kommer jag inte att ta emot några nybesök innan
+            mammaledigheten, eftersom jag inte kan garantera kontinuerlig
+            uppföljning under månaderna som följer. Fokus kommer att ligga på
+            att ta hand om dig som redan har varit hos mig sedan tidigare.
           </p>
           <p>
-            Planen är sedan att vara tillbaka under hösten – hoppas vi ses innan dess! 😊<br />
-            Tack för förtroendet och för att du väljer att komma till mig – det betyder verkligen mycket. 🤍
+            Planen är sedan att vara tillbaka under hösten – hoppas vi ses innan
+            dess! 😊<br />
+            Tack för förtroendet och för att du väljer att komma till mig – det
+            betyder verkligen mycket. 🤍
           </p>
           <p class="signature">Varmt,<br />Anna</p>
         </div>
         <div data-en lang="en">
           <h2 id="announcement-heading-en">🌸 MATERNITY LEAVE 🌸</h2>
           <p>
-            In May, I will be going on maternity leave – something I am very much looking forward to! 🥰<br />
-            Until then, I will be working as usual at the studio in Kålltorp and at Idrottskadekliniken in Sävedalen, but starting in April, I will have slightly reduced hours.<br />
-            The calendar is already starting to fill up, so please book well in advance via Bokadirekt or get in touch via email if you would like to come in for a treatment!
+            In May, I will be going on maternity leave – something I am very
+            much looking forward to! 🥰<br />
+            Until then, I will be working as usual at the studio in Kålltorp and
+            at Idrottskadekliniken in Sävedalen, but starting in April, I will
+            have slightly reduced hours.<br />
+            The calendar is already starting to fill up, so please book well in
+            advance via Bokadirekt or get in touch via email if you would like
+            to come in for a treatment!
           </p>
           <p>
-            Regarding osteopathy, I will not be accepting any new patients before my maternity leave, as I cannot guarantee continuous follow-up in the following months. My focus will be on taking care of those who have already visited me previously.
+            Regarding osteopathy, I will not be accepting any new patients
+            before my maternity leave, as I cannot guarantee continuous
+            follow-up in the following months. My focus will be on taking care
+            of those who have already visited me previously.
           </p>
           <p>
-            The plan is then to be back during the autumn – hope to see you before then! 😊<br />
-            Thank you for your trust and for choosing to come to me – it really means a lot. 🤍
+            The plan is then to be back during the autumn – hope to see you
+            before then! 😊<br />
+            Thank you for your trust and for choosing to come to me – it really
+            means a lot. 🤍
           </p>
           <p class="signature">Warmly,<br />Anna</p>
         </div>
@@ -411,10 +437,12 @@
       </div>
       <p>
         <span data-en lang="en"
-          >&copy; 2025 Osteopat Anna. All rights reserved.</span
+          >&copy; <span class="copyright-year">2026</span> Osteopat Anna. All
+          rights reserved.</span
         >
         <span data-sv lang="sv" style="display: none"
-          >&copy; 2025 Osteopat Anna. Alla rättigheter förbehållna.</span
+          >&copy; <span class="copyright-year">2026</span> Osteopat Anna. Alla
+          rättigheter förbehållna.</span
         >
       </p>
     </footer>
