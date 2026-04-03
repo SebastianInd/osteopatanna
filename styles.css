@@ -151,6 +151,43 @@ h2::after {
   border-radius: 2px;
 }
 
+/* Announcement Section */
+.announcement {
+  background: var(--color-bg);
+  padding: 2rem;
+  border-radius: var(--radius-card);
+  border: 2px solid var(--color-accent);
+  margin-bottom: 3rem;
+}
+
+.announcement h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.announcement h2::after {
+  display: none;
+}
+
+.announcement p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.announcement p:last-child {
+  margin-bottom: 0;
+}
+
+.announcement .signature {
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
 /* About Section */
 .about-flex {
   display: flex;
